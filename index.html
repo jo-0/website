@@ -1,381 +1,557 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ajo Varghese</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded" rel="stylesheet"/>
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ajo Varghese</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
     body {
-      background-color: #f8fafc;
       font-family: 'Open Sans', sans-serif;
     }
 
-    .black-img {
-      background-color: #f8fafc;
+    /* Hero animations */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
-    </style>
-  </head>
-  <body class="bg-slate-50 dark:bg-slate-950">
-    <header class="px-6 md:px-10 xl:px-60 pt-6 pb-16 ease-in-out duration-300 flex flex-col gap-5 justify-center">
-      <section>
-        <p class="text-xl dark:text-white">Hi, my name is</p>
-        <p class="text-3xl dark:text-white xl:text-6xl font-bold py-3">Ajo Varghese</p>
-        <p class="text-xl dark:text-white xl:text-2xl 2xl:w-[80%]">
-          I'm a software engineer based in Bangalore, India 🚦 with 7+ years of experience building software for startups and enterprises.<br>
-          Over the past couple of years, I've been working on back-end development with Python, Django and Flask, and front-end development with Vue.js. However, I'm also experienced in iOS development with Swift. Furthermore, I am a DevOps enthusiast.
+
+    @keyframes slideUp {
+      from {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .animate-fade-in {
+      animation: fadeIn 0.8s ease-out;
+    }
+
+    .animate-slide-up {
+      animation: slideUp 1s ease-out 0.2s both;
+    }
+
+    /* Smooth scroll */
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+</head>
+
+<body class="bg-slate-50 dark:bg-slate-950">
+  <header class="min-h-screen flex items-center justify-center px-6 md:px-10 xl:px-60 py-20">
+    <div class="max-w-4xl mx-auto text-center">
+      <!-- Greeting with animation -->
+      <div class="mb-8">
+        <p class="text-lg md:text-xl text-slate-600 dark:text-slate-400 mb-2 animate-fade-in">
+          👋 Hey there! I'm
         </p>
-      </section>
-
-      <article class="inline-flex flex-wrap gap-3 w-full">
-        <div>
-          <a class="rounded-full bg-white p-3 drop-shadow-md hover:drop-shadow-lg transition-all ease-in-out duration-300 inline-flex gap-2 items-center" href="mailto:jo-0@outlook.in">
-            <span class="material-symbols-rounded text-[24px]">mail</span>
-            Email
-          </a>
-        </div>
-
-        <div>
-          <a class="rounded-full bg-white p-3 drop-shadow-md hover:drop-shadow-lg transition-all ease-in-out duration-300 inline-flex gap-2 items-center" href="https://www.linkedin.com/in/jo-0/" target="_blank">
-            <svg class="h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>linkedin</title><path d="M19 3A2 2 0 0 1 21 5V19A2 2 0 0 1 19 21H5A2 2 0 0 1 3 19V5A2 2 0 0 1 5 3H19M18.5 18.5V13.2A3.26 3.26 0 0 0 15.24 9.94C14.39 9.94 13.4 10.46 12.92 11.24V10.13H10.13V18.5H12.92V13.57C12.92 12.8 13.54 12.17 14.31 12.17A1.4 1.4 0 0 1 15.71 13.57V18.5H18.5M6.88 8.56A1.68 1.68 0 0 0 8.56 6.88C8.56 5.95 7.81 5.19 6.88 5.19A1.69 1.69 0 0 0 5.19 6.88C5.19 7.81 5.95 8.56 6.88 8.56M8.27 18.5V10.13H5.5V18.5H8.27Z" /></svg>
-            LinkedIn
-          </a>
-        </div>
-
-        <div>
-          <a class="rounded-full bg-white p-3 drop-shadow-md hover:drop-shadow-lg transition-all ease-in-out duration-300 inline-flex gap-2 items-center" href="https://docs.google.com/document/d/1vegjnGSfWVzT_XSKSd-6kZTVtXY2wIETKo8bat2YYCQ" target="_blank">
-            <span class="material-symbols-rounded text-[24px]">description</span>
-            <div class="break-words hyphens-auto">Resume</div>
-          </a>
-        </div>
-      </article>
-    </header>
-
-    <main>
-      <div class="px-6 md:px-14 xl:px-60 py-5 ease-in-out duration-300">
-        <p class="text-3xl dark:text-white font-bold">Work experiences</p>
-
-        <article class="py-10 grid gap-5">
-          <section class="flex justify-center">
-            <div class="px-auto h-auto w-full bg-white dark:bg-slate-800 rounded-xl drop-shadow-lg ease-in-out duration-300">
-              <div class="p-5 grid gap-2">
-                <div class="flex flex-col md:flex-row gap-2 justify-between align-top">
-                  <div>
-                    <p class="text-xl dark:text-white font-semibold">
-                      <span>Software Engineer @ Dematic</span>
-                    </p>
-                    <p class="text-md dark:text-slate-400">May 2023 - Present</p>
-                  </div>
-                </div>
-  
-                <ul class="px-5 dark:text-slate-400 list-disc">
-                  <li>Migrated a Snowflake database to PostgreSQL.</li>
-                  <li>Developed Python (Flask) APIs that consume data from Snowflake DB and automate the process of generating electrical schemas. This significantly reduced the number of hours (months) an engineer had to spend drawing the schemas manually.</li>
-                  <li>Developed a validation tool for their drawing which checked if the devices have the right connections, so that they won't order duplicate cables and devices on-site which was saving thousands of dollars on each project.</li>
-                  <li>Single-handedly developed and deployed the entire application into different environments such as staging and production, also setup gitlab-CI which improved developer quality of life</li>
-                  <li>Used typescript in the frontend and introduced type checking in the backend with mypy.</li>
-                </ul>
-              </div>
-            </div>
-          </section>
-
-          <section class="flex justify-center">
-            <div class="px-auto h-auto w-full bg-white dark:bg-slate-800 rounded-xl drop-shadow-lg ease-in-out duration-300">
-              <div class="p-5 grid gap-2">
-                <div class="flex flex-col md:flex-row gap-2 justify-between align-top">
-                  <div>
-                    <p class="text-xl dark:text-white font-semibold">
-                      <span>Freelance Software Engineer</span>
-                    </p>
-                    <p class="text-md dark:text-slate-400">Sep 2022 - May 2023</p>
-                  </div>
-                </div>
-  
-                <ul class="px-5 dark:text-slate-400 list-disc">
-                  <li>Advised startups on what tech stack they should use.</li>
-                  <li>Built API's to create and upload customer list from Google cloud storage to the Google Ads panel, while also encrypting personal information, therefore automating the manual process and helping to serve relevant ads to tens of thousands of customers.</li>
-                </ul>
-              </div>
-            </div>
-          </section>
-          
-          <section class="flex justify-center">
-            <div class="px-auto h-auto w-full bg-white dark:bg-slate-800 rounded-xl drop-shadow-lg ease-in-out duration-300">
-              <div class="p-5 grid gap-2">
-                <div class="flex flex-col md:flex-row gap-2 justify-between align-top">
-                  <div>
-                    <p class="text-xl dark:text-white font-semibold">
-                      <span>Software Engineer</span>
-                      <span> @ Canary Technologies</span>
-                    </p>
-                    <p class="text-md dark:text-white">Aug 2020 - Apr 2022</p>
-                  </div>
-                </div>
-
-                <ul class="px-5 dark:text-slate-400 list-disc">
-                  <li>I was responsible for integrating analytical tools like Amplitude, FullStory, and Pendo into our products to understand user behaviors, which helped us make better product decisions.</li>
-                  <li>Localized the app with Vue-i18n, which helped the company onboard customers from Asia, Europe, and Latin America.</li>
-                  <li>Set up a production-like environment from scratch for Pentesting, which helped the company get audited successfully and earn certifications.</li>
-                  <li>Interviewed candidates and helped build a team in India.</li>
-                  <li>Wrote headless browser scripts to automate internal processes which eased the workload on the customer success team, and also helped gain a large group of customers who were otherwise reluctant to try on the manual process.</li>
-                </ul>
-              </div>
-            </div>
-          </section>
-
-          <section class="flex justify-center">
-            <div class="px-auto h-auto w-full bg-white dark:bg-slate-800 rounded-xl drop-shadow-lg ease-in-out duration-300">
-              <div class="p-5 grid gap-2">
-                <div class="flex flex-col md:flex-row gap-2 justify-between align-top">
-                  <div>
-                    <p class="text-xl dark:text-white font-semibold">
-                      <span>Software Engineer</span>
-                      <span> @ Futurecam</span>
-                    </p>
-                    <p class="text-md dark:text-white">Mar 2019 - Jul 2020</p>
-                  </div>
-                </div>
-
-                <ul class="px-5 dark:text-slate-400 list-disc">
-                  <li>Along with two other engineers, I built a highly advanced photography app, Futurecam, for iOS.</li>
-                  <li>Built and launched an MVP to the App Store in a hackathon in a day.</li>
-                  <li>Learned Chrome extension development and delivered a Chrome extension to optimize a key business process — all in 1 month.</li>
-                  <li>Helped onboard a new employee to the company and ramp up the codebase, significantly improving their productivity.</li>
-                  <li>For one of our clients, I Interviewed iOS engineers and identified highly skilled ones, who were hired and went on to perform well in the company.</li>
-                </ul>
-              </div>
-            </div>
-          </section>
-
-          <section class="flex justify-center">
-            <div class="px-auto h-auto w-full bg-white dark:bg-slate-800 rounded-xl drop-shadow-lg ease-in-out duration-300">
-              <div class="p-5 grid gap-2">
-                <div class="flex flex-col md:flex-row gap-2 justify-between align-top">
-                  <div>
-                    <p class="text-xl dark:text-white font-semibold">
-                      <span>Frontend developer</span>
-                      <span> @ OnerosTech Pvt. Ltd.</span>
-                    </p>
-                    <p class="text-md dark:text-white">Jun 2018 - Feb 2019</p>
-                  </div>
-                </div>
-
-                <ul class="px-5 dark:text-slate-400 list-disc">
-                  <li>I was responsible for maintaining two iOS puzzle games and building features like Player stats, Achievements, and Leaderboards.</li>
-                  <li>Furthermore, I designed and built a daily quest feature for players to compete and achieve goals every day and thus increasing the user retention of the app.</li>
-                </ul>
-              </div>
-            </div>
-          </section>
-        </article>
+        <h1 class="text-5xl md:text-7xl xl:text-8xl font-bold text-slate-900 dark:text-white mb-6 animate-slide-up">
+          Ajo Varghese
+        </h1>
+        <div class="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto mb-8 rounded-full"></div>
       </div>
 
-      <article class="px-6 md:px-14 xl:px-60 py-5 ease-in-out duration-300 ">
-        <h2 class="text-3xl dark:text-white font-bold">Technologies</h2>
-
-        <div class="py-10">
-          <section class="grid sm:grid-cols-2 md:grid-cols-4 gap-3 ease-in-out duration-300">
-            <div>
-              <p class="text-xl dark:text-white font-bold pb-3">Languages</p>
-              <div class="p-2 flex items-center gap-3">
-                <img class="h-8 object-contain" src="https://raw.githubusercontent.com/github/explore/main/topics/swift/swift.png" alt="Swift" />
-                <p class="text-lg dark:text-slate-400">Swift</p>
-              </div>
-              <div class="p-2 flex items-center gap-3">
-                <img class="h-8 object-contain" src="https://raw.githubusercontent.com/github/explore/main/topics/python/python.png" alt="Python" />
-                <p class="text-lg dark:text-slate-400">Python</p>
-              </div>
-              <div class="p-2 flex items-center gap-3">
-                <img class="h-8 object-contain" src="https://raw.githubusercontent.com/github/explore/main/topics/javascript/javascript.png" alt="JavaScript" />
-                <p class="text-lg dark:text-slate-400">JavaScript</p>
-              </div>
-              <div class="p-2 flex items-center gap-3">
-                <img class="h-8 object-contain" src="https://raw.githubusercontent.com/github/explore/main/topics/typescript/typescript.png" alt="JavaScript" />
-                <p class="text-lg dark:text-slate-400">TypeScript</p>
-              </div>
-            </div>
-
-            <div>
-              <p class="text-xl dark:text-white font-bold pb-3">Frameworks</p>
-              <div class="p-2 flex items-center gap-3">
-                <img class="h-8 object-contain" src="https://raw.githubusercontent.com/github/explore/main/topics/django/django.png" alt="Django" />
-                <p class="text-lg dark:text-slate-400">Django</p>
-              </div>
-              <div class="p-2 flex items-center gap-3">
-                <img class="h-8 object-contain black-img" src="https://raw.githubusercontent.com/github/explore/main/topics/flask/flask.png" alt="Vue.js" />
-                <p class="text-lg dark:text-slate-400">Flask</p>
-              </div>
-              <div class="p-2 flex items-center gap-3">
-                <img class="h-8 object-contain" src="https://raw.githubusercontent.com/github/explore/main/topics/vue/vue.png" alt="Vue.js" />
-                <p class="text-lg dark:text-slate-400">Vue.js</p>
-              </div>
-            </div>
-
-            <div>
-              <p class="text-xl dark:text-white font-bold pb-3">Databases</p>
-              <div class="p-2 flex items-center gap-3">
-                <img class="h-8 object-contain" src="https://raw.githubusercontent.com/github/explore/main/topics/postgresql/postgresql.png" alt="PostgreSQL" />
-                <p class="text-lg dark:text-slate-400">PostgreSQL</p>
-              </div>
-              <div class="p-2 flex items-center gap-3">
-                <img class="h-8 object-contain" src="https://raw.githubusercontent.com/vdesabou/kafka-docker-playground/master/images/icons/snowflake.png" alt="Snowflake" />
-                <p class="text-lg dark:text-slate-400">Snowflake</p>
-              </div>
-              <div class="p-2 flex items-center gap-3">
-                <img class="h-8 object-contain" src="https://raw.githubusercontent.com/github/explore/main/topics/sql-server/sql-server.png" alt="SQL Server" />
-                <p class="text-lg dark:text-slate-400">SQL Server</p>
-              </div>
-            </div>
-            
-            <div>
-              <p class="text-xl dark:text-white font-bold pb-3">Platforms</p>
-              <div class="p-2 flex items-center gap-3">
-                <img class="h-8 object-contain black-img" src="https://raw.githubusercontent.com/github/explore/main/topics/apple/apple.png" alt="iOS" />
-                <p class="text-lg dark:text-slate-400">iOS</p>
-              </div>
-              <div class="p-2 flex items-center gap-3">
-                <img class="h-8 object-contain" src="https://raw.githubusercontent.com/github/explore/main/topics/docker/docker.png" alt="Docker" />
-                <p class="text-lg dark:text-slate-400">Docker</p>
-              </div>
-              <div class="p-2 flex items-center gap-3">
-                <img class="h-8 object-contain" src="https://raw.githubusercontent.com/github/explore/main/topics/aws/aws.png" alt="AWS" />
-                <p class="text-lg dark:text-slate-400">AWS</p>
-              </div>
-              <div class="p-2 flex items-center gap-3">
-                <img class="h-8 object-contain" src="https://raw.githubusercontent.com/github/explore/main/topics/google-cloud/google-cloud.png" alt="Google Cloud" />
-                <p class="text-lg dark:text-slate-400">Google Cloud</p>
-              </div>
-              <div class="p-2 flex items-center gap-3">
-                <img class="h-8 object-contain" src="https://raw.githubusercontent.com/github/explore/main/topics/raspberry-pi/raspberry-pi.png" alt="Raspberry Pi" />
-                <p class="text-lg dark:text-slate-400">Raspberry Pi</p>
-              </div>
-            </div>
-          </section>
-        </div>
-      </article>
-
-      <article class="px-6 md:px-14 xl:px-60 py-5 ease-in-out duration-300">
-        <p class="text-3xl dark:text-white font-bold">Links</p>
-
-        <div class="py-10 grid lg:grid-cols-3 gap-5">
-          <section class="flex justify-center h-full w-full">
-            <div class="flex flex-col justify-between px-auto w-full bg-white dark:bg-slate-800 rounded-xl drop-shadow-lg ease-in-out duration-300">
-              <div class="flex flex-col p-5 grid gap-2">
-                <p class="text-xl dark:text-white font-semibold">Futurecam</p>
-                <p class="text-lg dark:text-slate-400">An advanced computational photography app built in iOS.</p>
-              </div>
-
-              <div class="flex justify-between p-5">
-                <a class="w-fit dark:text-slate-400 flex items-center gap-1 hover:font-semibold ease-in-out duration-300"
-                  href="https://kartickvad.github.io/futurecam-website/" target="_blank">
-                  Link
-                  <span class="material-symbols-rounded">open_in_new</span>
-                </a>
-
-                <div class="flex flex-wrap gap-2">
-                  <img class="h-8 object-contain" src="https://raw.githubusercontent.com/github/explore/main/topics/ios/ios.png" alt="Swift" />
-                </div>
-              </div>
-            </div>
-          </section>
-
-          <section class="flex justify-center h-full w-full">
-            <div class="flex flex-col justify-between px-auto w-full bg-white dark:bg-slate-800 rounded-xl drop-shadow-lg ease-in-out duration-300">
-              <div class="flex flex-col p-5 grid gap-2">
-                <p class="text-xl dark:text-white font-semibold">Github</p>
-                <p class="text-lg dark:text-slate-400">Some of my hobby projects.</p>
-              </div>
-
-              <div class="flex justify-between p-5">
-                <a class="w-fit dark:text-slate-400 flex items-center gap-1 hover:font-semibold ease-in-out duration-300"
-                  href="https://github.com/jo-0/" target="_blank">
-                  Link
-                  <span class="material-symbols-rounded">open_in_new</span>
-                </a>
-
-                <div class="flex flex-wrap gap-2">
-                  <img class="h-8 object-contain" src="https://raw.githubusercontent.com/github/explore/main/topics/github/github.png" alt="Swift" />
-                </div>
-              </div>
-            </div>
-          </section>
-
-          <section class="flex justify-center h-full w-full">
-            <div class="flex flex-col justify-between px-auto w-full bg-white dark:bg-slate-800 rounded-xl drop-shadow-lg ease-in-out duration-300">
-              <div class="flex flex-col p-5 grid gap-2">
-                <p class="text-xl dark:text-white font-semibold">Stack Overflow</p>
-                <p class="text-lg dark:text-slate-400">My profile at Stack Overflow.</p>
-              </div>
-
-              <div class="flex justify-between p-5">
-                <a class="w-fit dark:text-slate-400 flex items-center gap-1 hover:font-semibold ease-in-out duration-300"
-                  href="https://stackoverflow.com/users/9014860/ajo" target="_blank">
-                  Link
-                  <span class="material-symbols-rounded">open_in_new</span>
-                </a>
-
-                <div class="flex flex-wrap gap-2">
-                  <img class="h-8 object-contain" src="https://raw.githubusercontent.com/github/explore/main/topics/stackoverflow/stackoverflow.png" alt="Swift" />
-                </div>
-              </div>
-            </div>
-          </section>
-        </div>
-      </article>
-
-      <div class="px-6 md:px-14 xl:px-60 py-5 ease-in-out duration-300">
-        <p class="text-3xl dark:text-white font-bold">Education</p>
-
-        <article class="py-10 grid gap-5">
-          <section class="flex justify-center">
-            <div class="px-auto h-auto w-full bg-white dark:bg-slate-800 rounded-xl drop-shadow-lg ease-in-out duration-300">
-              <div class="p-5 grid gap-2">
-                <div class="flex flex-col md:flex-row gap-2 justify-between align-top">
-                  <p class="text-xl dark:text-white">
-                    <span>Bachelor's Degree in Computer Science and Engineering</span>
-                    <span> @ <a class="text-[blue]" href="https://en.wikipedia.org/wiki/Acharya_Institute_of_Technology" target="_blank">AIT</a>, Bangalore</span>
-                  </p>
-                  <p class="text-lg dark:text-white">2015</p>
-                </div>
-              </div>
-            </div>
-          </section>
-        </article>
+      <!-- Role and location -->
+      <div class="mb-8">
+        <p class="text-2xl md:text-3xl font-semibold text-slate-800 dark:text-slate-200 mb-4">
+          Full-Stack Software Engineer
+        </p>
+        <p class="text-lg md:text-xl text-slate-600 dark:text-slate-400 flex items-center justify-center gap-2">
+          <span class="text-2xl">📍</span>
+          Bangalore, India
+        </p>
       </div>
 
-      <article class="px-6 md:px-14 xl:px-60 py-5 h-[60vh] ease-in-out duration-300 flex items-center justify-center">
-        <div class="flex flex-col gap-10 items-center">
-          <h2 class="text-5xl  dark:text-white font-bold">Contact information</h2>
-  
-          <section class="flex flex-wrap gap-4">
-            <div>
-              <a class="rounded-full bg-white p-3 drop-shadow-md hover:drop-shadow-lg transition-all ease-in-out duration-300 inline-flex gap-2 items-center" href="mailto:jo-0@outlook.in">
-                <span class="material-symbols-rounded text-[24px]">mail</span>
-                Email
-              </a>
-            </div>
+      <!-- Key highlights -->
+      <div class="mb-12 max-w-3xl mx-auto">
+        <p class="text-lg md:text-xl text-slate-700 dark:text-slate-300 leading-relaxed mb-6">
+          I build scalable software solutions with <span class="font-semibold text-blue-600 dark:text-blue-400">8+
+            years</span> of experience
+          across startups and enterprises. From Python backends to iOS apps, I love turning complex problems into
+          elegant code.
+        </p>
 
-            <div>
-              <a class="rounded-full bg-white p-3 drop-shadow-md hover:drop-shadow-lg transition-all ease-in-out duration-300 inline-flex gap-2 items-center" href="https://www.linkedin.com/in/jo-0/" target="_blank">
-                <svg class="h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>linkedin</title><path d="M19 3A2 2 0 0 1 21 5V19A2 2 0 0 1 19 21H5A2 2 0 0 1 3 19V5A2 2 0 0 1 5 3H19M18.5 18.5V13.2A3.26 3.26 0 0 0 15.24 9.94C14.39 9.94 13.4 10.46 12.92 11.24V10.13H10.13V18.5H12.92V13.57C12.92 12.8 13.54 12.17 14.31 12.17A1.4 1.4 0 0 1 15.71 13.57V18.5H18.5M6.88 8.56A1.68 1.68 0 0 0 8.56 6.88C8.56 5.95 7.81 5.19 6.88 5.19A1.69 1.69 0 0 0 5.19 6.88C5.19 7.81 5.95 8.56 6.88 8.56M8.27 18.5V10.13H5.5V18.5H8.27Z" /></svg>
-                LinkedIn
-              </a>
-            </div>
-
-          </section>
+        <!-- Tech highlights -->
+        <div class="flex flex-wrap justify-center gap-3 mb-8">
+          <span
+            class="px-4 py-2 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 rounded-full text-sm font-medium">
+            Python & Django
+          </span>
+          <span
+            class="px-4 py-2 bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-300 rounded-full text-sm font-medium">
+            Vue.js & TypeScript
+          </span>
+          <span
+            class="px-4 py-2 bg-purple-100 dark:bg-purple-900/30 text-purple-800 dark:text-purple-300 rounded-full text-sm font-medium">
+            iOS & Swift
+          </span>
+          <span
+            class="px-4 py-2 bg-orange-100 dark:bg-orange-900/30 text-orange-800 dark:text-orange-300 rounded-full text-sm font-medium">
+            DevOps & AWS
+          </span>
         </div>
-      </article>
-    </main>
+      </div>
 
-    <footer class="flex flex-col text-gray-600 text-sm items-center py-5">
-      <a href="https://github.com/fang-wei-jie/fang-wei-jie.github.io" target="_blank">Credits</a>
-    </footer>
-  </body>
+      <!-- CTA Buttons -->
+      <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
+        <a href="#work"
+          class="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
+          View My Work
+        </a>
+        <a href="mailto:jo-0@outlook.in"
+          class="border-2 border-slate-300 dark:border-slate-600 hover:border-blue-500 dark:hover:border-blue-400 text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105">
+          Get In Touch
+        </a>
+      </div>
+
+      <!-- Social links -->
+      <div class="flex justify-center gap-6">
+        <a href="https://www.linkedin.com/in/jo-0/" target="_blank"
+          class="text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-300">
+          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+            <path
+              d="M19 3A2 2 0 0 1 21 5V19A2 2 0 0 1 19 21H5A2 2 0 0 1 3 19V5A2 2 0 0 1 5 3H19M18.5 18.5V13.2A3.26 3.26 0 0 0 15.24 9.94C14.39 9.94 13.4 10.46 12.92 11.24V10.13H10.13V18.5H12.92V13.57C12.92 12.8 13.54 12.17 14.31 12.17A1.4 1.4 0 0 1 15.71 13.57V18.5H18.5M6.88 8.56A1.68 1.68 0 0 0 8.56 6.88C8.56 5.95 7.81 5.19 6.88 5.19A1.69 1.69 0 0 0 5.19 6.88C5.19 7.81 5.95 8.56 6.88 8.56M8.27 18.5V10.13H5.5V18.5H8.27Z" />
+          </svg>
+        </a>
+        <a href="https://github.com/jo-0/" target="_blank"
+          class="text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors duration-300">
+          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+            <path
+              d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12Z" />
+          </svg>
+        </a>
+        <a href="https://docs.google.com/document/d/1vegjnGSfWVzT_XSKSd-6kZTVtXY2wIETKo8bat2YYCQ" target="_blank"
+          class="text-slate-600 dark:text-slate-400 hover:text-green-600 dark:hover:text-green-400 transition-colors duration-300">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Work Experience Section -->
+    <section id="work" class="py-20 px-6 md:px-10 xl:px-60">
+      <div class="max-w-6xl mx-auto">
+        <!-- Section Header -->
+        <div class="text-center mb-16">
+          <h2 class="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white mb-4">
+            Work Experience
+          </h2>
+          <div class="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto mb-6 rounded-full"></div>
+          <p class="text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
+            8+ years of building impactful software solutions across diverse industries and technologies
+          </p>
+        </div>
+
+        <!-- Timeline -->
+        <div class="relative">
+          <!-- Timeline line -->
+          <div class="absolute w-0.5 h-full bg-gradient-to-b from-blue-500 to-purple-600" style="left: 32px;"></div>
+
+          <!-- Experience Items -->
+          <div class="space-y-8">
+
+            <!-- Dematic -->
+            <div class="relative pl-20">
+              <!-- Timeline Dot -->
+              <div
+                class="absolute w-4 h-4 bg-blue-500 rounded-full border-4 border-white dark:border-slate-950 top-6 z-10"
+                style="left: 25px;">
+              </div>
+
+              <div
+                class="bg-white dark:bg-slate-800 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300">
+                <div class="flex items-center gap-3 mb-3">
+                  <div class="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
+                  <span class="text-sm font-medium text-green-600 dark:text-green-400">Current</span>
+                </div>
+                <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2">Lead Software Engineer</h3>
+                <p class="text-blue-600 dark:text-blue-400 font-semibold mb-2">Dematic</p>
+                <p class="text-sm text-slate-500 dark:text-slate-400 mb-4">May 2023 - Present</p>
+                <div class="flex flex-wrap gap-2 mb-4">
+                  <span
+                    class="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 rounded-full text-xs">Python</span>
+                  <span
+                    class="px-3 py-1 bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-300 rounded-full text-xs">Flask</span>
+                  <span
+                    class="px-3 py-1 bg-purple-100 dark:bg-purple-900/30 text-purple-800 dark:text-purple-300 rounded-full text-xs">PostgreSQL</span>
+                  <span
+                    class="px-3 py-1 bg-orange-100 dark:bg-orange-900/30 text-orange-800 dark:text-orange-300 rounded-full text-xs">TypeScript</span>
+                </div>
+                <ul class="text-sm text-slate-600 dark:text-slate-400 space-y-2">
+                  <li><span class="text-blue-500 font-bold">•</span> Migrated Snowflake database to PostgreSQL,
+                    improving performance and reducing costs</li>
+                  <li><span class="text-blue-500 font-bold">•</span> Built Python APIs that automated electrical schema
+                    generation, saving months of manual work</li>
+                  <li><span class="text-blue-500 font-bold">•</span> Developed validation tools that prevented duplicate
+                    orders, saving thousands per project</li>
+                  <li><span class="text-blue-500 font-bold">•</span> Set up CI/CD pipelines and deployed to
+                    staging/production environments</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Freelance -->
+            <div class="relative pl-20">
+              <!-- Timeline Dot -->
+              <div
+                class="absolute w-4 h-4 bg-purple-500 rounded-full border-4 border-white dark:border-slate-950 top-6 z-10"
+                style="left: 25px;">
+              </div>
+
+              <div
+                class="bg-white dark:bg-slate-800 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300">
+                <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2">Freelance Software Engineer</h3>
+                <p class="text-purple-600 dark:text-purple-400 font-semibold mb-2">Independent</p>
+                <p class="text-sm text-slate-500 dark:text-slate-400 mb-4">Sep 2022 - May 2023</p>
+                <div class="flex flex-wrap gap-2 mb-4">
+                  <span
+                    class="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 rounded-full text-xs">Python</span>
+                  <span
+                    class="px-3 py-1 bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-300 rounded-full text-xs">Google
+                    Cloud</span>
+                  <span
+                    class="px-3 py-1 bg-red-100 dark:bg-red-900/30 text-red-800 dark:text-red-300 rounded-full text-xs">Google
+                    Ads API</span>
+                </div>
+                <ul class="text-sm text-slate-600 dark:text-slate-400 space-y-2">
+                  <li><span class="text-purple-500 font-bold">•</span> Advised startups on optimal tech stack selection
+                    and architecture decisions</li>
+                  <li><span class="text-purple-500 font-bold">•</span> Built secure APIs for Google Ads automation,
+                    serving tens of thousands of customers</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Canary Technologies -->
+            <div class="relative pl-20">
+              <!-- Timeline Dot -->
+              <div
+                class="absolute w-4 h-4 bg-green-500 rounded-full border-4 border-white dark:border-slate-950 top-6 z-10"
+                style="left: 25px;">
+              </div>
+
+              <div
+                class="bg-white dark:bg-slate-800 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300">
+                <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2">Software Engineer</h3>
+                <p class="text-green-600 dark:text-green-400 font-semibold mb-2">Canary Technologies</p>
+                <p class="text-sm text-slate-500 dark:text-slate-400 mb-4">Aug 2020 - Apr 2022</p>
+                <div class="flex flex-wrap gap-2 mb-4">
+                  <span
+                    class="px-3 py-1 bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-300 rounded-full text-xs">Vue.js</span>
+                  <span
+                    class="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 rounded-full text-xs">Analytics</span>
+                  <span
+                    class="px-3 py-1 bg-purple-100 dark:bg-purple-900/30 text-purple-800 dark:text-purple-300 rounded-full text-xs">i18n</span>
+                  <span
+                    class="px-3 py-1 bg-orange-100 dark:bg-orange-900/30 text-orange-800 dark:text-orange-300 rounded-full text-xs">DevOps</span>
+                </div>
+                <ul class="text-sm text-slate-600 dark:text-slate-400 space-y-2">
+                  <li><span class="text-green-500 font-bold">•</span> Integrated analytics tools (Amplitude, FullStory,
+                    Pendo) for data-driven decisions</li>
+                  <li><span class="text-green-500 font-bold">•</span> Localized app with Vue-i18n, enabling expansion to
+                    Asia, Europe, and Latin America</li>
+                  <li><span class="text-green-500 font-bold">•</span> Built production-like pentesting environment for
+                    successful security audits</li>
+                  <li><span class="text-green-500 font-bold">•</span> Automated internal processes with headless browser
+                    scripts</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Futurecam -->
+            <div class="relative pl-20">
+              <!-- Timeline Dot -->
+              <div
+                class="absolute w-4 h-4 bg-yellow-500 rounded-full border-4 border-white dark:border-slate-950 top-6 z-10"
+                style="left: 25px;">
+              </div>
+
+              <div
+                class="bg-white dark:bg-slate-800 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300">
+                <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2">Software Engineer</h3>
+                <p class="text-orange-600 dark:text-orange-400 font-semibold mb-2">Futurecam</p>
+                <p class="text-sm text-slate-500 dark:text-slate-400 mb-4">Mar 2019 - Jul 2020</p>
+                <div class="flex flex-wrap gap-2 mb-4">
+                  <span
+                    class="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 rounded-full text-xs">iOS</span>
+                  <span
+                    class="px-3 py-1 bg-orange-100 dark:bg-orange-900/30 text-orange-800 dark:text-orange-300 rounded-full text-xs">Swift</span>
+                  <span
+                    class="px-3 py-1 bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-300 rounded-full text-xs">Chrome
+                    Extension</span>
+                </div>
+                <ul class="text-sm text-slate-600 dark:text-slate-400 space-y-2">
+                  <li><span class="text-yellow-500 font-bold">•</span> Built advanced computational photography app for
+                    iOS with 2 other engineers</li>
+                  <li><span class="text-yellow-500 font-bold">•</span> Launched MVP to App Store in just one day during
+                    hackathon</li>
+                  <li><span class="text-yellow-500 font-bold">•</span> Learned and delivered Chrome extension in 1 month
+                    for business optimization</li>
+                  <li><span class="text-yellow-500 font-bold">•</span> Interviewed and hired skilled iOS engineers for
+                    client projects</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- OnerosTech -->
+            <div class="relative pl-20">
+              <!-- Timeline Dot -->
+              <div
+                class="absolute w-4 h-4 bg-red-500 rounded-full border-4 border-white dark:border-slate-950 top-6 z-10"
+                style="left: 25px;">
+              </div>
+
+              <div
+                class="bg-white dark:bg-slate-800 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300">
+                <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2">Frontend Developer</h3>
+                <p class="text-red-600 dark:text-red-400 font-semibold mb-2">OnerosTech Pvt. Ltd.</p>
+                <p class="text-sm text-slate-500 dark:text-slate-400 mb-4">Jun 2018 - Feb 2019</p>
+                <div class="flex flex-wrap gap-2 mb-4">
+                  <span
+                    class="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 rounded-full text-xs">iOS</span>
+                  <span
+                    class="px-3 py-1 bg-purple-100 dark:bg-purple-900/30 text-purple-800 dark:text-purple-300 rounded-full text-xs">Game
+                    Dev</span>
+                  <span
+                    class="px-3 py-1 bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-300 rounded-full text-xs">Swift</span>
+                </div>
+                <ul class="text-sm text-slate-600 dark:text-slate-400 space-y-2">
+                  <li><span class="text-red-500 font-bold">•</span> Maintained iOS puzzle games with stats,
+                    achievements, and leaderboards</li>
+                  <li><span class="text-red-500 font-bold">•</span> Designed daily quest feature that significantly
+                    improved user retention</li>
+                </ul>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Projects & Links Section -->
+    <section class="py-20 px-6 md:px-10 xl:px-60">
+      <div class="max-w-6xl mx-auto">
+        <!-- Section Header -->
+        <div class="text-center mb-16">
+          <h2 class="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white mb-4">
+            Projects & Links
+          </h2>
+          <div class="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto mb-6 rounded-full"></div>
+          <p class="text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
+            Explore my key projects and professional profiles
+          </p>
+        </div>
+
+        <!-- Projects Grid -->
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+          <!-- Futurecam Project -->
+          <div
+            class="bg-white dark:bg-slate-800 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:transform hover:-translate-y-1">
+            <div class="flex items-start justify-between mb-4">
+              <div>
+                <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2">Futurecam</h3>
+                <span
+                  class="inline-block px-3 py-1 bg-orange-100 dark:bg-orange-900/30 text-orange-800 dark:text-orange-300 rounded-full text-sm font-medium mb-3">iOS
+                  App</span>
+              </div>
+              <img class="h-6 w-6 object-contain opacity-60"
+                src="https://raw.githubusercontent.com/github/explore/main/topics/ios/ios.png" alt="iOS" />
+            </div>
+
+            <p class="text-slate-600 dark:text-slate-400 mb-6 leading-relaxed">
+              An advanced computational photography app built for iOS.
+            </p>
+
+            <a class="inline-flex items-center gap-2 text-orange-600 dark:text-orange-400 hover:text-orange-700 dark:hover:text-orange-300 font-medium transition-colors duration-300"
+              href="https://kartickvad.github.io/futurecam-website/" target="_blank">
+              View Project
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+              </svg>
+            </a>
+          </div>
+
+          <!-- GitHub Profile -->
+          <div
+            class="bg-white dark:bg-slate-800 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:transform hover:-translate-y-1">
+            <div class="flex items-start justify-between mb-4">
+              <div>
+                <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2">GitHub</h3>
+                <span
+                  class="inline-block px-3 py-1 bg-gray-100 dark:bg-gray-900/30 text-gray-800 dark:text-gray-300 rounded-full text-sm font-medium mb-3">Code
+                  Repository</span>
+              </div>
+              <svg class="h-6 w-6 opacity-60" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12Z" />
+              </svg>
+            </div>
+
+            <p class="text-slate-600 dark:text-slate-400 mb-6 leading-relaxed">
+              A collection of my personal coding projects.
+            </p>
+
+            <a class="inline-flex items-center gap-2 text-slate-700 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 font-medium transition-colors duration-300"
+              href="https://github.com/jo-0/" target="_blank">
+              View Profile
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+              </svg>
+            </a>
+          </div>
+
+          <!-- Stack Overflow Profile -->
+          <div
+            class="bg-white dark:bg-slate-800 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:transform hover:-translate-y-1">
+            <div class="flex items-start justify-between mb-4">
+              <div>
+                <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2">Stack Overflow</h3>
+                <span
+                  class="inline-block px-3 py-1 bg-orange-100 dark:bg-orange-900/30 text-orange-800 dark:text-orange-300 rounded-full text-sm font-medium mb-3">Q&A
+                  Profile</span>
+              </div>
+              <svg class="h-6 w-6 opacity-60" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M15 21h-10v-2h10v2zm6-11.665l-1.621-9.335-1.993.346 1.62 9.335 1.994-.346zm-5.964 6.937l-9.746-.975-.186 2.016 9.755.879.177-1.92zm.538-2.587l-9.276-2.608-.526 1.954 9.306 2.5.496-1.846zm1.204-2.413l-8.297-4.864-1.029 1.743 8.298 4.865 1.028-1.744zm1.866-1.467l-5.339-7.829-1.672 1.14 5.339 7.829 1.672-1.14zm-2.644 4.195v8h-12v-8h-2v10h16v-10h-2z" />
+              </svg>
+            </div>
+
+            <p class="text-slate-600 dark:text-slate-400 mb-6 leading-relaxed">
+              My contributions and activity on Stack Overflow.
+            </p>
+
+            <a class="inline-flex items-center gap-2 text-orange-600 dark:text-orange-400 hover:text-orange-700 dark:hover:text-orange-300 font-medium transition-colors duration-300"
+              href="https://stackoverflow.com/users/9014860/ajo" target="_blank">
+              View Profile
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+              </svg>
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Education Section -->
+    <section class="py-20 px-6 md:px-10 xl:px-60">
+      <div class="max-w-6xl mx-auto">
+        <!-- Section Header -->
+        <div class="text-center mb-16">
+          <h2 class="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white mb-4">
+            Education
+          </h2>
+          <div class="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto mb-6 rounded-full"></div>
+          <p class="text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
+            Academic foundation in computer science and engineering
+          </p>
+        </div>
+
+        <!-- Education Card -->
+        <div class="max-w-4xl mx-auto">
+          <div class="bg-white dark:bg-slate-800 rounded-xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
+            <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+              <div class="flex-1">
+                <h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-2">
+                  Bachelor's Degree in Computer Science and Engineering
+                </h3>
+                <p class="text-lg text-slate-600 dark:text-slate-400 mb-2">
+                  <a class="text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 font-semibold transition-colors duration-300"
+                    href="https://en.wikipedia.org/wiki/Acharya_Institute_of_Technology" target="_blank">
+                    Acharya Institute of Technology (AIT)
+                  </a>
+                </p>
+                <p class="text-slate-600 dark:text-slate-400">
+                  📍 Bangalore, India
+                </p>
+              </div>
+              <div class="flex flex-col items-end">
+                <div
+                  class="bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 px-4 py-2 rounded-full font-semibold">
+                  2015
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section
+      class="py-20 px-6 md:px-10 xl:px-60 bg-gradient-to-br from-slate-50 to-blue-50 dark:from-slate-900 dark:to-slate-800">
+      <div class="max-w-4xl mx-auto text-center">
+        <div class="mb-8">
+          <h2 class="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white mb-6">
+            Let's Build Something Amazing Together
+          </h2>
+          <div class="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto mb-8 rounded-full"></div>
+        </div>
+
+        <div class="mb-12">
+          <p class="text-xl md:text-2xl text-slate-700 dark:text-slate-300 leading-relaxed mb-6">
+            I'm passionate about turning complex challenges into elegant solutions. Whether you're looking to build
+            scalable backend systems, create intuitive user experiences, or optimize your development workflow, I'd love
+            to collaborate.
+          </p>
+          <p class="text-lg text-slate-600 dark:text-slate-400">
+            Ready to discuss your next project? Let's connect and explore how we can work together.
+          </p>
+        </div>
+
+        <!-- CTA Buttons -->
+        <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <a href="mailto:jo-0@outlook.in"
+            class="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl inline-flex items-center gap-2">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+            </svg>
+            Start a Conversation
+          </a>
+          <a href="https://www.linkedin.com/in/jo-0/" target="_blank"
+            class="border-2 border-slate-300 dark:border-slate-600 hover:border-blue-500 dark:hover:border-blue-400 text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 inline-flex items-center gap-2">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M19 3A2 2 0 0 1 21 5V19A2 2 0 0 1 19 21H5A2 2 0 0 1 3 19V5A2 2 0 0 1 5 3H19M18.5 18.5V13.2A3.26 3.26 0 0 0 15.24 9.94C14.39 9.94 13.4 10.46 12.92 11.24V10.13H10.13V18.5H12.92V13.57C12.92 12.8 13.54 12.17 14.31 12.17A1.4 1.4 0 0 1 15.71 13.57V18.5H18.5M6.88 8.56A1.68 1.68 0 0 0 8.56 6.88C8.56 5.95 7.81 5.19 6.88 5.19A1.69 1.69 0 0 0 5.19 6.88C5.19 7.81 5.95 8.56 6.88 8.56M8.27 18.5V10.13H5.5V18.5H8.27Z" />
+            </svg>
+            Connect on LinkedIn
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+
 </html>
