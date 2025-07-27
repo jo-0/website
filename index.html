@@ -17,22 +17,20 @@
     tailwind.config = {
       darkMode: "class"
     }
-  </script>
-  <script>
-      // Prevent theme flash by applying theme immediately
-      (function () {
-        function getSystemTheme() {
-          return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
-        }
+    // Prevent theme flash by applying theme immediately
+    (function () {
+      function getSystemTheme() {
+        return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+      }
 
-        const savedTheme = localStorage.getItem("theme");
-        const systemTheme = getSystemTheme();
-        const currentTheme = savedTheme || systemTheme;
+      const savedTheme = localStorage.getItem("theme");
+      const systemTheme = getSystemTheme();
+      const currentTheme = savedTheme || systemTheme;
 
-        if (currentTheme === "dark") {
-          document.documentElement.classList.add("dark");
-        }
-      })();
+      if (currentTheme === "dark") {
+        document.documentElement.classList.add("dark");
+      }
+    })();
   </script>
   <style>
     body {
